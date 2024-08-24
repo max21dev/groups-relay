@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: relay-server
-          path: ./relay.groups.nip29.com
+          path: relay.groups.nip29.com
 
   deploy:
     runs-on: ubuntu-24.04
@@ -63,7 +63,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
-          source: "relays.groups.nip29.com"
+          source: "relay.groups.nip29.com"
           target: "/var/www/relays"
 
       - name: Set execute permission
