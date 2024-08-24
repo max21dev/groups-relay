@@ -64,7 +64,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
-          source: "groups.nip29.com"
+          source: "relays.groups.nip29.com"
           target: "/var/www/relays"
 
       - name: Set execute permission
