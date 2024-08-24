@@ -1,8 +1,6 @@
 package main
 
 import (
-	"github.com/fiatjaf/relay29"
-	"github.com/nbd-wtf/go-nostr"
 	"net/http"
 	"os"
 	"slices"
@@ -11,8 +9,10 @@ import (
 	"github.com/fiatjaf/eventstore/lmdb"
 	"github.com/fiatjaf/khatru"
 	"github.com/fiatjaf/khatru/policies"
+	"github.com/fiatjaf/relay29"
 	"github.com/fiatjaf/relay29/khatru29"
 	"github.com/kelseyhightower/envconfig"
+	"github.com/nbd-wtf/go-nostr"
 	"github.com/rs/zerolog"
 )
 

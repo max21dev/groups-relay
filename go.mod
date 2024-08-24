@@ -3,15 +3,15 @@ module github.com/max21dev/groups-relay
 go 1.23.0
 
 require (
-	github.com/fiatjaf/eventstore v0.7.0
-	github.com/fiatjaf/khatru v0.6.1
+	github.com/fiatjaf/eventstore v0.7.2
+	github.com/fiatjaf/khatru v0.7.6
 	github.com/fiatjaf/relay29 v0.3.0
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/nbd-wtf/go-nostr v0.34.3
-	github.com/puzpuzpuz/xsync/v3 v3.1.0
+	github.com/nbd-wtf/go-nostr v0.34.5
+	github.com/puzpuzpuz/xsync/v3 v3.4.0
 	github.com/rs/zerolog v1.31.0
 	github.com/theplant/htmlgo v1.0.3
-	golang.org/x/time v0.4.0
+	golang.org/x/time v0.5.0
 )
 
 require (
