@@ -3,7 +3,7 @@ name: Deploy Golang Groups Relay
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
