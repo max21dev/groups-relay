@@ -73,7 +73,7 @@ func main() {
 		policies.PreventLargeTags(64),
 		policies.PreventTooManyIndexableTags(6, []int{9005}, nil),
 		policies.RestrictToSpecifiedKinds(
-			7, 9, 10, 11, 12,
+			9, 10, 11, 12,
 			30023, 31922, 31923, 9802,
 			9000, 9001, 9002, 9003, 9004, 9005, 9006, 9007,
 			9021,
