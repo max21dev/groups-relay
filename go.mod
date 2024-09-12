@@ -7,6 +7,7 @@ require (
 	github.com/fiatjaf/khatru v0.8.1
 	github.com/fiatjaf/relay29 v0.4.0
 	github.com/kelseyhightower/envconfig v1.4.0
+	github.com/mojocn/base64Captcha v1.3.6
 	github.com/nbd-wtf/go-nostr v0.35.0
 	github.com/puzpuzpuz/xsync/v3 v3.4.0
 	github.com/rs/zerolog v1.31.0
