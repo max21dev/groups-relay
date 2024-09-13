@@ -81,7 +81,7 @@ func main() {
 		policies.PreventTimestampsInThePast(60*time.Second),
 		policies.PreventTimestampsInTheFuture(30*time.Second),
 		rateLimit,
-		preventGroupCreation,
+		//preventGroupCreation, enable client to create groups via kind 9007
 	)
 
 	// http routes
