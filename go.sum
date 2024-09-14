@@ -45,6 +45,8 @@ github.com/fiatjaf/eventstore v0.9.0 h1:WsGDVAaRaVaV/J8PdrQDGfzChrL13q+lTO4C44rh
 github.com/fiatjaf/eventstore v0.9.0/go.mod h1:JrAce5h0wi79+Sw4gsEq5kz0NtUxbVkOZ7lAo7ay6R8=
 github.com/fiatjaf/khatru v0.8.1 h1:BWAZqwuT0272ZlyzPkuqAA0eGBOs5G3u0Dn1tlWrm6Q=
 github.com/fiatjaf/khatru v0.8.1/go.mod h1:jRmqbbIbEH+y0unt3wMUBwqY/btVussqx5SmBoGhXtg=
+github.com/fiatjaf/relay29 v0.4.0 h1:IOF0vInukOBNTPbeHIzNvdncSnuEDwUHhZ4e572F2OA=
+github.com/fiatjaf/relay29 v0.4.0/go.mod h1:9x53D3BEFFz8BjM0xIbNGMWhD3BPMhWTLnzeHjsFJWA=
 github.com/fiatjaf/relay29 v0.4.1-0.20240914144646-008c197d9ae8 h1:kh4j71YC7tnNgEwk9Kr3V6FWUuJlFBe51bQO6ODuyH0=
 github.com/fiatjaf/relay29 v0.4.1-0.20240914144646-008c197d9ae8/go.mod h1:53kGpj5gQ9fkVifYjolDBMRbIF+JjiyJhc8h3ZIJjUw=
 github.com/fiatjaf/set v0.0.3 h1:LoawhcGoD504baBw0TwVJTQemzt15QYuxutzzWl2kgE=
