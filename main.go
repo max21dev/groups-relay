@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"net/http"
 	"os"
 	"slices"
@@ -13,6 +14,7 @@ import (
 	"github.com/fiatjaf/relay29/khatru29"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/nbd-wtf/go-nostr"
+	"github.com/nbd-wtf/go-nostr/nip29"
 	"github.com/rs/zerolog"
 )
 
@@ -37,6 +39,11 @@ var (
 	state *relay29.State
 )
 
+var (
+	kingRole   = &nip29.Role{Name: "king", Description: "the group's max top admin"}
+	bishopRole = &nip29.Role{Name: "bishop", Description: "the group's noble servant"}
+)
+
 func main() {
 	err := envconfig.Process("", &s)
 	if err != nil {
@@ -55,10 +62,36 @@ func main() {
 
 	// init relay29 stuff
 	relay, state = khatru29.Init(relay29.Options{
-		Domain:    s.Domain,
-		DB:        db,
-		SecretKey: s.RelayPrivkey,
+		Domain:                  s.Domain,
+		DB:                      db,
+		SecretKey:               s.RelayPrivkey,
+		DefaultRoles:            []*nip29.Role{kingRole, bishopRole},
+		GroupCreatorDefaultRole: kingRole,
 	})
+
+	// setup group-related restrictions
+	state.AllowAction = func(ctx context.Context, group nip29.Group, role *nip29.Role, action relay29.Action) bool {
+		// this is simple:
+		if _, ok := action.(relay29.PutUser); ok {
+			// anyone can invite new users
+			return true
+		}
+		if role == kingRole {
+			// owners can do everything
+			return true
+		}
+		if role == bishopRole {
+			// admins can delete people and messages
+			switch action.(type) {
+			case relay29.RemoveUser:
+				return true
+			case relay29.DeleteEvent:
+				return true
+			}
+		}
+		// no one else can do anything else
+		return false
+	}
 
 	// init relay
 	relay.Info.Name = s.RelayName
@@ -73,7 +106,7 @@ func main() {
 		policies.PreventLargeTags(64),
 		policies.PreventTooManyIndexableTags(6, []int{9005}, nil),
 		policies.RestrictToSpecifiedKinds(
-			7, 9, 10, 11, 12,
+			9, 10, 11, 12, 1111,
 			30023, 31922, 31923, 9802,
 			9000, 9001, 9002, 9003, 9004, 9005, 9006, 9007, 9008,
 			9021, 9022,
@@ -81,7 +114,7 @@ func main() {
 		policies.PreventTimestampsInThePast(60*time.Second),
 		policies.PreventTimestampsInTheFuture(30*time.Second),
 		rateLimit,
-		//preventGroupCreation, enable client to create groups via kind 9007
+		preventGroupCreation, //enable client to create groups via kind 9007
 	)
 
 	// http routes
