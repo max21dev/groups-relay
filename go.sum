@@ -55,6 +55,8 @@ github.com/fiatjaf/relay29 v0.4.1-0.20240914144646-008c197d9ae8 h1:kh4j71YC7tnNg
 github.com/fiatjaf/relay29 v0.4.1-0.20240914144646-008c197d9ae8/go.mod h1:53kGpj5gQ9fkVifYjolDBMRbIF+JjiyJhc8h3ZIJjUw=
 github.com/fiatjaf/relay29 v0.5.0 h1:buiUDG8v5sogi9MWqUuP2tkiCxF0s9yjS2WrLTuJofY=
 github.com/fiatjaf/relay29 v0.5.0/go.mod h1:klVYam7d5DrGZcXQsLWbwNSeZKnlS/k0NPVBE56zXRQ=
+github.com/fiatjaf/relay29 v0.5.1 h1:+eSRefHm/oEVAEXv6oiGJ/iQbM9mZq5Z6ys7KL0tEOo=
+github.com/fiatjaf/relay29 v0.5.1/go.mod h1:klVYam7d5DrGZcXQsLWbwNSeZKnlS/k0NPVBE56zXRQ=
 github.com/fiatjaf/set v0.0.3 h1:LoawhcGoD504baBw0TwVJTQemzt15QYuxutzzWl2kgE=
 github.com/fiatjaf/set v0.0.3/go.mod h1:hdSwBrO+CwMEbYQAMaHtsib30KQLDtVjbX/1OgDK3tY=
 github.com/fsnotify/fsnotify v1.4.7/go.mod h1:jwhsz4b93w/PPRr/qN1Yymfu8t87LnFCMoQvtojpjFo=
