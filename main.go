@@ -103,7 +103,7 @@ func main() {
 		blockDeletesOfOldMessages,
 	)
 	relay.RejectEvent = slices.Insert(relay.RejectEvent, 2,
-		policies.PreventLargeTags(64),
+		policies.PreventLargeTags(256),
 		policies.PreventTooManyIndexableTags(6, []int{9005}, nil),
 		policies.RestrictToSpecifiedKinds(
 			7, 9, 10, 11, 12,
