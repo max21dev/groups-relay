@@ -7,7 +7,7 @@ toolchain go1.23.3
 require (
 	github.com/fiatjaf/eventstore v0.9.0
 	github.com/fiatjaf/khatru v0.8.1
-	github.com/fiatjaf/relay29 v0.5.0
+	github.com/fiatjaf/relay29 v0.5.1
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/mojocn/base64Captcha v1.3.6
 	github.com/nbd-wtf/go-nostr v0.42.1
