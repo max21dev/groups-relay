@@ -1,0 +1,18 @@
+services:
+  groups-relay:
+    build:
+      context: .
+    volumes:
+      - ./db/:/app/db/
+    environment:
+      - PORT=9005
+      - DOMAIN=chat.example.com
+      - RELAY_NAME=groups-relay
+      - RELAY_PRIVKEY=XXXX
+      # OPTIONAL
+      - RELAY_DESCRIPTION=Groups Relay
+      # - RELAY_CONTACT=contact@example.com
+      # - RELAY_ICON=https://example.com/icon.png
+      # - DATABASE_PATH=./db
+    ports:
+      - 9005:9005
