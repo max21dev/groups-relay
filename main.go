@@ -27,6 +27,7 @@ type Settings struct {
 	RelayContact     string `envconfig:"RELAY_CONTACT"`
 	RelayIcon        string `envconfig:"RELAY_ICON"`
 	DatabasePath     string `envconfig:"DATABASE_PATH" default:"./db"`
+	DatabaseMapSize  uint64 `envconfig:"DATABASE_MAPSIZE" default:"10737418240"`
 
 	RelayPubkey string `envconfig:"-"`
 }
@@ -54,6 +55,7 @@ func main() {
 
 	// load db
 	db.Path = s.DatabasePath
+	db.MapSize = int64(s.DatabaseMapSize)
 	if err := db.Init(); err != nil {
 		log.Fatal().Err(err).Msg("failed to initialize database")
 		return
